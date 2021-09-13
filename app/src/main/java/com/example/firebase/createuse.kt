@@ -7,7 +7,6 @@ import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.FirebaseAuth
 
 class createuse : AppCompatActivity() {
@@ -46,7 +45,7 @@ class createuse : AppCompatActivity() {
     }
 
     fun backToMainActivity(){
-        val intent = Intent(this,MainActivity::class.java)
+        val intent = Intent(this,login::class.java)
         startActivity(intent)
     }
 

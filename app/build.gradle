@@ -1,7 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id("androidx.navigation.safeargs.kotlin")
 }
+
+apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
@@ -36,8 +39,14 @@ android {
         viewBinding true
     }
 }
-
+def nav_version = "2.3.5"
 dependencies {
+
+    //Navigation ----
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    //------
+
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
     implementation platform('com.google.firebase:firebase-bom:28.4.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
